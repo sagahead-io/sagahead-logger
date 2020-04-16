@@ -1,0 +1,37 @@
+{
+  "name": "sagahead-logger",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npx tsc",
+    "test": "jest",
+    "clean": "rm -rf './dist'",
+    "dev": "npx nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "format": "npx prettier --write './src/**/*.{ts,tsx,js,jsx}'",
+    "format:check": "npx prettier --check './src/**/*.{ts,tsx,js,jsx}'"
+  },
+  "files": [
+    "/dist"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "shortid": "^2.2.15",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.2",
+    "@types/shortid": "^0.0.29",
+    "@types/uuid": "^3.4.5",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^2.0.4",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.8.3"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+}
